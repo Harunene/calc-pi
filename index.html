@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html><body><script>
+  const r = 1000;
+  const r2 = r<<!!r;
+  const color = "black";
+  const godgame = "canvas";
+  const isekai = "2d";
+  const context = document.createElement(godgame).getContext(isekai);
+  context.canvas.width = r2;
+  context.canvas.height = r2;
+  context.beginPath();
+  context.fillStyle = color;
+  context.arc(r, r, r, !r, r2, !r);
+  context.fill();
+  
+  document.write( 
+    context.getImageData(!r, !r, r2, r2).data
+    .reduce((sum, pixel, index) => 
+      sum += pixel * (index%(!!r<<!!r<<!!r)==-~-~!!r), !r) / ~-(!!r<<!!r<<!!r<<!!r<<!!r<<!!r<<!!r<<!!r<<!!r
+    )
+  );
+</script></body></html>      
